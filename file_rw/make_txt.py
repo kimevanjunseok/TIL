@@ -40,6 +40,10 @@
 # f.writelines(menu)
 # f.close()
 
-menu = ["카레\n", "탕수육\n", "짬뽕\n"]
-with open("menu.txt", "w", encoding = 'utf-8') as f:
-    f.writelines(menu)
+# menu = ["카레\n", "탕수육\n", "짬뽕\n"]
+# with open("menu.txt", "w", encoding = 'utf-8') as f:
+#     f.writelines(menu)
+
+with open("new.txt", "r") as f:
+    line = f.readlines()
+    print(line)
