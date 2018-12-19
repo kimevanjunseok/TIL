@@ -24,7 +24,7 @@
 #     line = f.readline()
 #     print(line.strip())
 
-with open("new.txt", "r", encoding = 'utf-8') as f:
-    lines = f.readlines()
-    for line in lines:
-        print(line.strip())
+# with open("new.txt", "r", encoding = 'utf-8') as f:
+#     lines = f.readlines()
+#     for line in lines:
+#         print(line.strip())
