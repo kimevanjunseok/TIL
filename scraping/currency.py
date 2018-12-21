@@ -34,7 +34,7 @@ from bs4 import BeautifulSoup
 # req = requests.get(url).text
 # soup = BeautifulSoup(req, 'html.parser')
 
-# for tag in soup.select('.item_wrp'):
+# for tag in soup.select('#marketindexLastList > li'):
 #     name = tag.select_one('.stock_item').text
 #     number = tag.select_one('.stock_price').text
 #     print('{}의 환율은 {} 입니다.'.format(name, number))
@@ -49,15 +49,15 @@ from bs4 import BeautifulSoup
 # req = requests.get(url).text
 # soup = BeautifulSoup(req, 'html.parser')
 
-# for tag in soup.select('.tab_body on .dtable clr'):
+# for tag in soup.select('.link'):
 #     country = tag.select_one('.name').text
-#     number = tag.select_one('.idx').text
+#     number = tag.select_one('.idx').text    
 #     print('{}의 환율은 {} 입니다.'.format(country, number))
 
-url = "http://www.op.gg/summoner/userName=%EB%B9%A8%EA%B0%84%EB%B9%84%ED%96%89%EA%B8%B0"
-req = requests.get(url).text
-soup = BeautifulSoup(req, 'html.parser')
+# url = "http://www.op.gg/summoner/userName=%EB%B9%A8%EA%B0%84%EB%B9%84%ED%96%89%EA%B8%B0"
+# req = requests.get(url).text
+# soup = BeautifulSoup(req, 'html.parser')
 
-for tag in soup.select('.SummonerLayout'):
-    ranknumber = tag.select_one('.tierRank').text
-    print('환율은 {} 입니다.'.format(ranknumber))
+# for tag in soup.select('.SummonerLayout'):
+#     ranknumber = tag.select_one('.tierRank').text
+#     print('환율은 {} 입니다.'.format(ranknumber))
