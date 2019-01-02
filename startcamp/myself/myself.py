@@ -48,15 +48,17 @@
 # print('|\\_/|\n''|q p|   /}\n''( 0 )"""\\\n''|"^"`    |\n''||_/=\\\\__|')
 
 #한수
-import random
 N = int(input())
-M = []
-count = 0
-for i in range(1, N+1):
-    number = N % i
-    if number == 0:
-        M.append(i)
-        count += 1
-x = random.sample(range(0, count), 1)
-index = x[0]
-print(M)
+cnt = 99
+if N < 100:
+        print(N)
+else:
+        for i in range(100, N+1):
+                n_1 = i // 100
+                n_2 = (i % 100) // 10
+                n_3 = i % 10
+                if (n_1 - n_2) == (n_2 - n_3):
+                        cnt += 1
+        print(cnt)
+
+#별찍기 -11
