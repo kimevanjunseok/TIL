@@ -18,8 +18,8 @@
 # b = a.split()
 # print(b)
 
-a,b = list(map(int, input().split()))
-print(a+b)
+# a,b = list(map(int, input().split()))
+# print(a+b)
 
 #3
 # A = int(input('A: '))
@@ -46,3 +46,17 @@ print(a+b)
 
 #5
 # print('|\\_/|\n''|q p|   /}\n''( 0 )"""\\\n''|"^"`    |\n''||_/=\\\\__|')
+
+#한수
+import random
+N = int(input())
+M = []
+count = 0
+for i in range(1, N+1):
+    number = N % i
+    if number == 0:
+        M.append(i)
+        count += 1
+x = random.sample(range(0, count), 1)
+index = x[0]
+print(M)
