@@ -62,33 +62,133 @@
 #         print(cnt)
 
 #별찍기 -11
-N = int(input())
-List = []
-List_2 = []
-a = '  *  '
-b = ' * * '
-c = '*****'
-List_2.append(a)
-List_2.append(b)
-List_2.append(c)
-List.append(a)
-List.append(b)
-List.append(c)
-cnt = N // 3
-num = 0
-for i in range(N):
-    if i > 2:
-        x = List_2[num] + ' ' + List_2[num]
-        List.append(x)
-        num += 1
-        if num == 3:
-            num = 0
-            for k in range(len(List)):
-                List_2.append(List[k].center(N*2-1))
-            for k in range(3):
-                del List_2[k]
-                print(k)
-    print(List[i].center(N*2-1))
+# N = int(input())
+# List = []
+# List_2 = []
+# a = '  *  '
+# b = ' * * '
+# c = '*****'
+# List_2.append(a)
+# List_2.append(b)
+# List_2.append(c)
+# List.append(a)
+# List.append(b)
+# List.append(c)
+# cnt = N // 3
+# num = 0
+# for i in range(N):
+#     if i > 2:
+#         x = List_2[num] + ' ' + List_2[num]
+#         List.append(x)
+#         num += 1
+#         if num == 3:
+#             num = 0
+#             for k in range(len(List)):
+#                 List_2.append(List[k].center(N*2-1))
+#             for k in range(3):
+#                 del List_2[k]
+#                 print(k)
+#     print(List[i].center(N*2-1))
 
-for i in range(6):
-    print(List_2[i])
+# for i in range(6):
+#     print(List_2[i])
+
+# def my_bin(x):
+#     L = []
+#     while True:
+#         if x == 1:
+#             L.append(1)
+#             break
+#         if x % 2 == 1:
+#             L.append(1)
+#             x = x // 2
+#         elif x % 2 == 0:
+#             L.append(0)
+#             x = x // 2
+#     bin_num = ''
+#     for i in L:
+#         i = str(i)
+#         bin_num += i
+#     bin_num = "0b" + bin_num[::-1]
+#     return bin_num
+
+# print(my_bin(4096), my_bin(5))
+# print(my_bin(4096) == bin(4096))
+# print(123)
+
+#OX
+# N = int(input())
+# count = 0
+# while count != N:
+#     score = list(input())
+#     cnt_1 = 0
+#     point = 0
+#     for i in score:
+#         if i == 'O':
+#             cnt_1 += 1
+#             point += cnt_1
+#         else:
+#             cnt_1 = 0
+#     print(point)
+#     count += 1
+
+#음계
+# num = list(map(int, input().split()))
+# ascending = list(range(1, 9))
+# descending = list(reversed(ascending))
+# if num == ascending:
+#     print('ascending')
+# elif num == descending:
+#     print('descending')
+# else:
+#     print('mixed')
+
+#평균 점수10
+# score = 0
+# for i in range(5):
+#     total = int(input())
+#     if total < 40:
+#         total = 40
+#     score += total
+# print(score//5)
+
+#아스키코드
+# n = input()
+# print(ord(n))
+
+#chr()
+
+#알파벳 찾기
+S = input()
+alpa = {
+    'a' : -1,
+    'b' : -1,
+    'c' : -1,
+    'd' : -1,
+    'e' : -1,
+    'f' : -1,
+    'g' : -1,
+    'h' : -1,
+    'i' : -1,
+    'j' : -1,
+    'k' : -1,
+    'l' : -1,
+    'm' : -1,
+    'n' : -1,
+    'o' : -1,
+    'p' : -1,
+    'q' : -1,
+    'r' : -1,
+    's' : -1,
+    't' : -1,
+    'u' : -1,
+    'v' : -1,
+    'w' : -1,
+    'x' : -1,
+    'y' : -1,
+    'z' : -1,
+}
+for i in range(len(S)):
+    alpa[S[i]] = i
+print(alpa)
+    
