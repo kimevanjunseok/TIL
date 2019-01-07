@@ -159,36 +159,102 @@
 #chr()
 
 #알파벳 찾기
-S = input()
-alpa = {
-    'a' : -1,
-    'b' : -1,
-    'c' : -1,
-    'd' : -1,
-    'e' : -1,
-    'f' : -1,
-    'g' : -1,
-    'h' : -1,
-    'i' : -1,
-    'j' : -1,
-    'k' : -1,
-    'l' : -1,
-    'm' : -1,
-    'n' : -1,
-    'o' : -1,
-    'p' : -1,
-    'q' : -1,
-    'r' : -1,
-    's' : -1,
-    't' : -1,
-    'u' : -1,
-    'v' : -1,
-    'w' : -1,
-    'x' : -1,
-    'y' : -1,
-    'z' : -1,
-}
-for i in range(len(S)):
-    alpa[S[i]] = i
-print(alpa)
-    
+# S = input()
+# alpa = {
+#     'a' : -1,
+#     'b' : -1,
+#     'c' : -1,
+#     'd' : -1,
+#     'e' : -1,
+#     'f' : -1,
+#     'g' : -1,
+#     'h' : -1,
+#     'i' : -1,
+#     'j' : -1,
+#     'k' : -1,
+#     'l' : -1,
+#     'm' : -1,
+#     'n' : -1,
+#     'o' : -1,
+#     'p' : -1,
+#     'q' : -1,
+#     'r' : -1,
+#     's' : -1,
+#     't' : -1,
+#     'u' : -1,
+#     'v' : -1,
+#     'w' : -1,
+#     'x' : -1,
+#     'y' : -1,
+#     'z' : -1,
+# }
+# t = ()
+# for i in range(len(S)):
+#     if S[i] != S[i-1]:
+#         alpa[S[i]] = i
+#     else:
+
+# for value in alpa.values():
+#     print(value, end=' ')
+
+#카잉달력
+import sys
+N = int(sys.stdin.readline())
+k = a = b = 0
+for i in range(N):
+    M, N, x, y = map(int, sys.stdin.readline().split())  
+    if (M % 2 == 0 and N % 2 == 0 and (x + y) % 2 == 1) or (N == M and x != y):
+        print(-1)
+    else:    
+        while True:
+            a += 1
+            b += 1
+            if a > M and b > N:
+                a = b = 1
+            elif a > M:
+                a = 1
+            elif b > N:
+                b = 1
+            elif a == x and b == y:
+                k += 1
+                print(k)
+                break 
+            k += 1
+        k = a = b = 0   
+
+# import sys
+# N = int(sys.stdin.readline())
+# cnt = 0
+# for i in range(N):
+#     M, N, x, y = map(int, sys.stdin.readline().split())  
+#     a = 1
+#     b = 1
+#     if (M % 2 == 0 and N % 2 == 0 and (x + y) % 2 == 1) or (N == M and x != y):
+#         print(-1)
+#         break
+#     elif M > N:
+#         while True:
+#             if b > N:
+#                 b = b - N
+#             elif x <= y and b == y - x + 1:
+#                 print(cnt + x)
+#                 break
+#             elif x > y and b == y - x + 1 + N:
+#                 print(cnt + x)
+#                 break
+#             else:
+#                 cnt += M
+#                 b += (M - N)
+#     elif M < N:
+#         while True:
+#             if b > M:
+#                 b = b - M
+#             elif y <= x and b == x - y + 1:
+#                 print(cnt + y)
+#                 break
+#             elif y > x and b == x - y + 1 + M:
+#                 print(cnt + y)
+#                 break
+#             else:
+#                 cnt += N
+#                 b += (N - M)
