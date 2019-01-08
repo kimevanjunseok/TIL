@@ -199,62 +199,125 @@
 
 #카잉달력
 import sys
+def gcd(a, b):
+    mod = a % b
+    while mod > 0:
+        a = b
+        b = mod
+        mod = a % b
+    return b
+
+def lcm(a, b):
+    return (a*b) // gcd(a, b)
+
 N = int(sys.stdin.readline())
-k = a = b = 0
 for i in range(N):
     M, N, x, y = map(int, sys.stdin.readline().split())  
+    a = b = 1
+    k = cnt = 0
     if (M % 2 == 0 and N % 2 == 0 and (x + y) % 2 == 1) or (N == M and x != y):
         print(-1)
-    else:    
-        while True:
-            a += 1
-            b += 1
-            if a > M and b > N:
-                a = b = 1
-            elif a > M:
-                a = 1
-            elif b > N:
-                b = 1
-            elif a == x and b == y:
-                k += 1
-                print(k)
-                break 
-            k += 1
-        k = a = b = 0   
+    elif M > N:
+        if (N == y) or (M == x and N == y):
+            print(lcm(x, y))
+        else:
+            while True:
+                if b > N:
+                    b = b - N
+                elif x <= y and b == y - x + 1:
+                    print(cnt + x)
+                    break
+                elif x > y and b == y - x + 1 + N:
+                    print(cnt + x)
+                    break
+                else:
+                    cnt += M
+                    b += (M - N)
+    elif M < N:
+        if (M == x) or (M == x and N == y):
+            print(lcm(y, x))
+        else:
+            while True:
+                if b > M:
+                    b = b - M
+                elif y <= x and b == x - y + 1:
+                    print(cnt + y)
+                    break
+                elif y > x and b == x - y + 1 + M:
+                    print(cnt + y)
+                    break
+                else:
+                    cnt += N
+                    b += (N - M)
+    elif M == N:
+        print(x)
 
 # import sys
+# def gcd(a, b):
+#     mod = a % b
+#     while mod > 0:
+#         a = b
+#         b = mod
+#         mod = a % b
+#     return b
+
+# def lcm(a, b):
+#     return (a*b) // gcd(a, b)
+    
 # N = int(sys.stdin.readline())
-# cnt = 0
 # for i in range(N):
 #     M, N, x, y = map(int, sys.stdin.readline().split())  
-#     a = 1
-#     b = 1
+#     a, b = M, N
+#     k = cnt = 0
 #     if (M % 2 == 0 and N % 2 == 0 and (x + y) % 2 == 1) or (N == M and x != y):
 #         print(-1)
-#         break
 #     elif M > N:
-#         while True:
-#             if b > N:
-#                 b = b - N
-#             elif x <= y and b == y - x + 1:
-#                 print(cnt + x)
-#                 break
-#             elif x > y and b == y - x + 1 + N:
-#                 print(cnt + x)
-#                 break
-#             else:
-#                 cnt += M
-#                 b += (M - N)
+#         if M == x and N == y:
+#             print(lcm(x, y))
+#         else:
+#             if x < y:
+#                 while True:
+#                     if (cnt > 0) and (a - b == y - x):
+#                         print(a+x)
+#                         break
+#                     elif a > b:
+#                         b += N
+#                     elif a < b:
+#                         a += M
+#                     cnt += 1
+#             elif x > y:
+#                 while True:
+#                     if (cnt > 0) and (b - a == x - y):
+#                         print(a+x)
+#                         break
+#                     elif a > b:
+#                         b += N
+#                     elif a < b:
+#                         a += M
+#                     cnt += 1
 #     elif M < N:
-#         while True:
-#             if b > M:
-#                 b = b - M
-#             elif y <= x and b == x - y + 1:
-#                 print(cnt + y)
-#                 break
-#             elif y > x and b == x - y + 1 + M:
-#                 print(cnt + y)
-#                 break
-#             else:
-#                 cnt += N
-#                 b += (N - M)
+#         if M == x and N == y:
+#             print(lcm(y, x))
+#         else:
+#             if x < y:
+#                 while True:
+#                     if (cnt > 0) and (a - b == y - x):
+#                         print(a+x)
+#                         break
+#                     elif a > b:
+#                         b += N
+#                     elif a < b:
+#                         a += M
+#                     cnt += 1
+#             elif x > y:
+#                 while True:
+#                     if (cnt > 0) and (a - b == x - y):
+#                         print(b+y)
+#                         break
+#                     elif a > b:
+#                         b += N
+#                     elif a < b:
+#                         a += M
+#                     cnt += 1
+#     elif M == N:
+#         print(x)
