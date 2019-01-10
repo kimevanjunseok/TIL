@@ -8,7 +8,7 @@
 
 ### (1) 함수는 오직 하나의 객체만 반환할 수 있어서, return a, b 처럼 쓸 수 없다. 
 
-### = True 
+### = False
 
 ### (2) 함수에서 return을 작성하지 않으면 None 값을 반환한다. 
 
@@ -16,7 +16,7 @@
 
 ### (3) 함수의 인자(parameter)는 함수 선언시 설정한 값이며, 인수(argument)는 함수 호출시 넘겨주는 값이다. 
 
-### = False
+### = True
 
 ### (4) 가변 인자를 설정할 때는 인자 앞에서 *을 붙이고, 이때는 함수 내에서 tuple로 처리된다. 
 
@@ -36,6 +36,9 @@ def my_mul(*num):
     for i in num:
         n *= i
     return n
+
+def my_mul(a, b=1):
+    return a*b
 ```
 
 
