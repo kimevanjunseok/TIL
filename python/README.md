@@ -1,6 +1,23 @@
 # Python 101 
+INDEX
 
-written by 7akikim
+[01. Python Intro](https://github.com/djpy2/python101/blob/master/Slide_01_Python_intro.ipynb)
+
+[02. Control Flow](https://github.com/djpy2/python101/blob/master/Slide_02_Control_of_flow.ipynb)
+
+[03. Control Flow_Function](https://github.com/djpy2/python101/blob/master/Slide_03_Control_of_flow_function.ipynb)
+
+[04. Recursive Function](https://github.com/djpy2/python101/blob/master/Slide_04_Recursive_function.ipynb)
+
+[05_1. Data Structure](https://github.com/djpy2/python101/blob/master/Slide_05_01_Data_structure.ipynb)
+
+[05_2. Data Structure Dictionary](https://github.com/djpy2/python101/blob/master/Slide_05_02_Dictionary_data_structure.ipynb)
+
+[06. Module](https://github.com/djpy2/python101/blob/master/Slide_06_Module.ipynb)
+
+[07. Errors and Exceptions](https://github.com/djpy2/python101/blob/master/Slide_07_Errors_and_exceptions.ipynb)
+
+[08. OOP Intro](https://github.com/djpy2/python101/blob/master/Slide_08_OOP_intro.ipynb)
 
 ## 개요
 
@@ -58,6 +75,17 @@ python version 3.6.7을 기준으로 작성되었음.
   pip install --upgrade pip
   source ~/.bashrc
   ```
+## Jupyter notebook 환경설정
+본 주피터 노트북은 슬라이드 쇼로 활용할 수 있도록 구성하였음. 
+### 0) Jupyter notebook 설치
+```powershell
+$ pip install jupyter
+```
+
+### 1) Jupyter notebook 실행
+```powershell
+$ jupyter notebook
+```
 
 ## License
 
