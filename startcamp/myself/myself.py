@@ -323,18 +323,86 @@
 #         print(x)
 
 # 1로 만들기
-N = int(input())
-cnt = 0
-while True:
-    if N == 1:
-        print(cnt)
-        break
-    if N % 3 == 0:
-        N = N // 3
-    elif (N - 1) % 3 == 0:
-        N = N - 1    
-    elif N % 2 == 0:
-        N = N // 2
-    else:
-        N = N - 1
-    cnt += 1
+# N = int(input())
+# cnt = 0
+# while True:
+#     if N == 1:
+#         print(cnt)
+#         break
+#     if N % 3 == 0:
+#         N = N // 3
+#     elif (N - 1) % 3 == 0:
+#         N = N - 1    
+#     elif N % 2 == 0:
+#         N = N // 2
+#     else:
+#         N = N - 1
+#     cnt += 1
+
+# 소수 구하기
+# N, M = input().split()
+# N = int(N)
+# if N == 1:
+#     N = 2
+# M = int(M)
+# root_M = int(M**0.5)
+# L = [True] * (M+1)
+# for i in range(2, root_M + 1):
+#     if L[i] == True:
+#         for j in range(i+i, M+1, i ):
+#             L[j] = False
+# result = [i for i in range(N, M+1) if L[i] == True]
+# for i in result:
+#     print(i)
+
+# def solution(n):
+#     L = [True] * (n + 1)
+#     M = int(n**0.5)
+#     for i in range(2, M+1):
+#         if L[i] == True:
+#             for j in range(i+i, n+1 ,i):
+#                 L[j] = False
+#     return len([i for i in range(2, n+1) if L[i] == True])
+# print(solution(100))
+
+# def solution(seoul):
+#     for i in range(len(seoul)):
+#         if seoul[i] in 'Kim':
+#             return f"김서방은 {i}에 있다"
+# print(solution(['Jane','iu', 'Kim']))
+
+# def solution(n):
+#     L = []
+#     for i in range(1, n+1):
+#         if n % i == 0:
+#             L.append(i)
+#     return sum(L)
+# print(solution(12))
+
+# def solution(n):
+#     s = ""
+#     for i in range(1, n+1):
+#         if i % 2 == 1:
+#             s += "수"
+#         else:
+#             s += "박"
+#     return s
+# print(solution(5))
+
+# 베르트랑 공준
+# while True:
+#     N = int(input())
+#     if N == 0:
+#         break
+#     M = int((2*N)**0.5)
+#     L = [True] * ((2*N)+1)
+#     for i in range(2, M + 1):
+#         if L[i] == True:
+#             for j in range(i+i, (2*N)+1, i ):
+#                 L[j] = False
+#     result = [i for i in range(N+1, (2*N)+1) if L[i] == True]
+#     print(len(result))
+
+#과제
+N = list(map(int, input().split()))
+print(N)
