@@ -403,6 +403,98 @@
 #     result = [i for i in range(N+1, (2*N)+1) if L[i] == True]
 #     print(len(result))
 
-#과제
+#
+# def solution(a, b):
+#     days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#     weeks = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED']
+#     day = sum(days[:a-1]) + int(b)
+#     return weeks[day % 7]
+# print(solution(5, 24))
+
+# def solution(arr):
+#     min_num = arr[0]
+#     if len(arr) > 1:
+#         for i in range(len(arr)):
+#             if min_num > arr[i]:
+#                 min_num = arr[i]
+#         arr.remove(min_num)
+#         return  arr
+#     else:
+#         return [-1]
+# print(solution([4, 3, 2, 1]))
+# print(solution([10]))
+
+# def solution(n):
+#     L = []
+#     for i in range(len(str(n))):
+#         L.append(n%10)
+#         n = n // 10
+#     return sum(L)
+# print(solution(123))
+
+# def solution(num):
+#     cnt = 0
+#     while True:
+#         if cnt == 500:
+#             return -1
+#         elif num == 1:
+#             return cnt
+#         elif num % 2 == 0:
+#             num = num // 2
+#             cnt += 1
+#         elif num % 2 != 0:
+#             num = num*3 + 1
+#             cnt += 1
+# print(solution(626331))
+
+# def solution(phone_number):
+#     answer = '*'*(len(phone_number)-4) + phone_number[-4:]
+#     return answer
+# s = '123456789'
+# print(s[-4:])
+# print(solution("027778888"))
+
+# def solution(x):
+#     L = []
+#     calc = x
+#     for i in range(len(str(calc))):
+#         L.append(calc % 10)
+#         calc = calc // 10
+#     print(sum(L))
+#     if x % sum(L) == 0:
+#         return True
+#     else:
+#         return False
+# print(solution(11))
+
+# def solution(n):
+#     n = n ** 0.5
+#     if n - int(n) == 0:
+#         return (n+1) ** 2
+#     else:
+#         return -1
+
+# def solution(x, n):
+#     answer = []
+#     for i in range(n):
+#         answer.append(x*(i+1))
+#     return answer
+
+# def solution(n):
+#     answer = []
+#     for i in str(n):
+#         answer.append(int(i)) 
+#     answer.reverse()
+#     return answer
+
+# def solution(arr):
+#     answer = [arr[0]]
+#     point = 0
+#     for i in range(1, len(arr)):
+#         if answer[point] != arr[i]:
+#             answer.append(arr[i])
+#             point += 1
+#     return answer
+
 N = list(map(int, input().split()))
 print(N)
