@@ -496,5 +496,83 @@
 #             point += 1
 #     return answer
 
-N = list(map(int, input().split()))
-print(N)
+# 가운데 글자 가져오기
+# def solution(s):
+#     answer = ''
+#     if len(s) % 2 != 0:
+#         answer = s[len(s)//2]
+#     else:
+#         answer = s[len(s)//2 -1] + s[len(s)//2]
+#     return answer
+# print(solution("abcde"))
+# print(solution("qwer"))
+
+# 문자열 다루기 기본
+# def solution(s):
+#     L = list(range(10)) * 6
+#     if len(s) == 4:
+#         for i in L:
+#             s = s.replace(str(i), '')
+#     else:
+#         return False
+#     return not s
+
+# 두 정수 사이의 합
+# def solution(a, b):
+#     M = max(a, b)
+#     N = min(a, b)
+#     answer = 0
+#     for i in range(N, M+1):
+#         answer += i
+#     return answer
+# print(solution(3, 5))
+# print(solution(3, 3))
+# print(solution(5, 3))
+
+# 나누어 떨어지는 숫자 배열
+# def solution(arr, divisor):
+#     answer = []
+#     for i in arr:
+#         if i % divisor == 0:
+#             answer.append(i)
+            
+#     if answer:
+#         answer.sort()
+#     else:
+#         answer.append(-1)
+#     return answer
+
+# 문자열 내 p와 y의 개수
+# def solution(s):
+#     s = s.lower()
+#     cnt_p, cnt_y = 0, 0
+#     for i in s:
+#         if i == "p":
+#             cnt_p += 1
+#         elif i == "y":
+#             cnt_y += 1
+#     return cnt_p == cnt_y
+
+# def solution(s):
+#     return s.lower().count('p') == s.lower().count('y') 
+
+# print(solution('p  PoooyY'))
+# print(solution('Pyy'))
+# print(solution('oo  o'))
+
+# 문자열 내림차순으로 배치하기
+# def solution(s):
+#     L = []
+#     for i in s:
+#         L.append(ord(i))
+#     L.sort()
+#     L.reverse()
+#     answer = ''
+#     for i in L:
+#         answer += chr(i)
+#     return answer
+
+# def solution(s):
+#     return ''.join(sorted(s, reverse=True))
+
+# print(solution("Zbcdefg"))
