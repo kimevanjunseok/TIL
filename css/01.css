@@ -1,0 +1,23 @@
+html {
+    font-size: 20px;
+}
+ol, ol li {
+    font-size: 1.2rem;
+    color: rgb(170, 39, 137);
+}
+ul, ul li {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+
+/* class에는 .를 찍음 */
+.vh {
+    font-size: 5vh;
+    color: rgba(170, 39, 137, 0.5);
+    /* 4번째 숫자는 투명도 */
+}
+
+.vw {
+    font-size: 5vw;
+    color: rgba(0, 0, 0, 0.5);
+}

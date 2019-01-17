@@ -1,0 +1,58 @@
+.big-box {
+    position: relative;
+    margin: 100px auto 500px;
+    border: 5px solid black;
+    width: 500px;
+    height: 500px;
+}
+  
+.small-box {
+position: absolute;
+width: 100px;
+height: 100px;
+}
+
+#red {
+background-color: red;
+top: 400px;
+left: 400px;
+}
+
+#gold {
+position: fixed;
+background-color: gold;
+bottom: 50px;
+right: 50px;
+/* 브라우저의 하단에서 50px, 우측에서 50px 위치에 고정하기 */
+}
+
+#green {
+background-color: green;
+top: 200px;
+left: 200px;
+}
+
+#blue {
+position: relative;
+background-color: blue;
+top: 100px;
+left: 100px;
+/* relative를 사용 */
+}
+
+#pink {
+background-color: pink;
+top: 0;
+}
+
+#purple {
+    background-color: purple;
+    top: 100px;
+    left: 100px;
+}
+
+#orange {
+    background-color: orange;
+    left: 100px;
+    top: -100px;
+}

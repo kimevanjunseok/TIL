@@ -576,3 +576,32 @@
 #     return ''.join(sorted(s, reverse=True))
 
 # print(solution("Zbcdefg"))
+
+####################################################3
+# 문자열 내 마음대로 정렬하기(문자열도 sort사용가능)
+# def solution(str_list, n):
+#     str_list.sort()
+#     for i in range(len(str_list)-1, 0, -1):
+#         for j in range(i):
+#             if ord(str_list[j][n]) > ord(str_list[j+1][n]):
+#                 str_list[j+1], str_list[j] = str_list[j], str_list[j+1]
+#     return str_list
+# print(solution(["sun", "bed", "car"], 1))
+# print(solution(["abce", "abcd", "cdx"], 2))
+
+#
+def solution(participant, completion):
+    if len(set(participant)) != len(set(completion)):       
+        return ''.join(set(participant)-set(completion))
+    else:
+        for i in completion:
+            participant.remove(i)
+        return participant[0]
+# print(solution(["leo", "kiki", "eden"], ["eden", "kiki"]))
+# print(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]))
+
+a = ["stanko", "ana", "mislav"]
+b = ["mislav", "stanko", "mislav", "ana"]
+c = ''.join(a)
+print(c)
+print(''.join(b).replace(c, ''))
