@@ -589,19 +589,19 @@
 # print(solution(["sun", "bed", "car"], 1))
 # print(solution(["abce", "abcd", "cdx"], 2))
 
-#
-def solution(participant, completion):
-    if len(set(participant)) != len(set(completion)):       
-        return ''.join(set(participant)-set(completion))
-    else:
-        for i in completion:
-            participant.remove(i)
-        return participant[0]
-# print(solution(["leo", "kiki", "eden"], ["eden", "kiki"]))
-# print(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]))
+def solution(n, lost, reserve):
+    answer = [1]*(n+1)
+    for i in lost:
+        answer[i] = 0
+    for i in reserve:
+        answer[i] += 1
+    for i in lost:
+        if answer[i-1] == 2:
+            answer[i] += 1
+            answer[i-1] += -1
+        elif answer[i+1] == 2:
+            answer[i] += 1
+            answer[i+1] += -1
+    return answer
 
-a = ["stanko", "ana", "mislav"]
-b = ["mislav", "stanko", "mislav", "ana"]
-c = ''.join(a)
-print(c)
-print(''.join(b).replace(c, ''))
+print(solution(5, [2, 4], [1, 3, 5]))
