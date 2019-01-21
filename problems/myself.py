@@ -589,19 +589,19 @@
 # print(solution(["sun", "bed", "car"], 1))
 # print(solution(["abce", "abcd", "cdx"], 2))
 
-def solution(n, lost, reserve):
-    answer = [1]*(n+1)
-    for i in lost:
-        answer[i] = 0
-    for i in reserve:
-        answer[i] += 1
-    for i in lost:
-        if answer[i-1] == 2:
-            answer[i] += 1
-            answer[i-1] += -1
-        elif answer[i+1] == 2:
-            answer[i] += 1
-            answer[i+1] += -1
-    return answer
+# def solution(n, lost, reserve):
+#     answer = [1]*(n+1)
+#     for i in lost:
+#         answer[i] = 0
+#     for i in reserve:
+#         answer[i] += 1
+#     for i in lost:
+#         if answer[i-1] == 2:
+#             answer[i] += 1
+#             answer[i-1] += -1
+#         elif answer[i+1] == 2:
+#             answer[i] += 1
+#             answer[i+1] += -1
+#     return answer
 
-print(solution(5, [2, 4], [1, 3, 5]))
+# print(solution(5, [2, 4], [1, 3, 5]))
