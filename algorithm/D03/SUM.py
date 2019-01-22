@@ -32,7 +32,7 @@ for N in range(1, T+1):
 
     com_sum = 0
     for i in range(100):
-        com_sum += arr[99-i][99-i]
+        com_sum += arr[i][99-i]
         if max_sum < com_sum:
             max_sum = com_sum
 

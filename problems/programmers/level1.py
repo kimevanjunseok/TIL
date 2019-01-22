@@ -328,84 +328,6 @@
 # print(solution(["sun", "bed", "car"], 1))
 # print(solution(["abce", "abcd", "cdx"], 2))
 
-# 완주하지 못한 선수
-# def solution(participant, completion):
-#     participant.sort()
-#     completion.sort()
-#     for i in range(len(completion)):
-#         if participant[i] != completion[i]:
-#             return participant[i]
-#     return participant[-1]
-# print(solution(["leo", "kiki", "eden"], ["eden", "kiki"]))
-# print(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]))
-
-# def solution(participant, completion):
-#     participant.sort()
-#     completion.sort()
-#     for p, c in zip(participant, completion):
-#         if p != c:
-#             return p
-#     return participant[-1]
-
-# import collections
-# def solution(participant, completion):
-#     answer = collections.Counter(participant) - collections.Counter(completion)
-#     return list(answer.keys())[0]
-
-# K번째수
-# def solution(array, commands):
-#     answer = []
-#     array_smaple = array
-#     for i in commands:
-#         sort_list = array_smaple[i[0]-1:i[1]]
-#         sort_list.sort()
-#         answer.append(sort_list[i[2]-1])
-#         sort_list = []
-#         array_smaple = array
-#     return answer
-# print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
-
-# def solution(array, commands):
-#     answer = []
-#     for com in commands:
-#         answer.append(sorted(array[com[0]-1:com[1]])[com[2]-1])
-#     return answer
-
-# 모의고사
-# def solution(answers):
-#     frist = [1, 2, 3, 4, 5]*(len(answers) // 5 + 1)
-#     second = [2, 1, 2, 3, 2, 4, 2, 5]*(len(answers) // 8 + 1)
-#     third = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]*(len(answers) // 10 + 1)
-#     answer = []
-#     cnt_first, cnt_second, cnt_third = 0, 0, 0
-#     for i in range(len(answers)):
-#         if answers[i] == frist[i]:
-#             cnt_first += 1
-        
-#         if answers[i] == second[i]:
-#             cnt_second += 1
-        
-#         if answers[i] == third[i]:
-#             cnt_third += 1
-
-#     if cnt_first > cnt_second and cnt_first > cnt_third:
-#         answer = [1]
-#     elif cnt_second > cnt_first and cnt_second > cnt_third:
-#         answer = [2]
-#     elif cnt_third > cnt_first and cnt_third > cnt_second:
-#         answer = [3]
-#     elif cnt_first == cnt_second and cnt_first > cnt_third:
-#         answer = [1, 2]
-#     elif cnt_first == cnt_third and cnt_first > cnt_second:
-#         answer = [1, 3]
-#     elif cnt_second == cnt_third and cnt_second > cnt_first:
-#         answer = [2, 3]
-#     else:
-#          answer = [1,2,3]
-#     return answer
-# print(solution([1,2,3,4,5]))
-# print(solution([1,3,2,4,2]))
-
 # 체육복
 # def solution(n, lost, reserve):
 #     answer = [1]*(n+2)
@@ -436,9 +358,6 @@
 # print(solution(5, [2, 4, 5], [1, 4]))
 # print(solution(5, [5], [3]))
 
-# 
-a = "//"
-b = "3"
-c = "4"
 
-print(type(+))
+    
+
