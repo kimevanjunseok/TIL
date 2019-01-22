@@ -69,14 +69,6 @@
 #         answer.append(result)
 #     return answer
 
-# 2016년
-# def solution(a, b):
-#     days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-#     weeks = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED']
-#     day = sum(days[:a-1]) + int(b)
-#     return weeks[day % 7]
-# print(solution(5, 24))
-
 # 제일 작은 수 제거하기
 # def solution(arr):
 #     min_num = arr[0]
@@ -161,16 +153,6 @@
 #     answer.reverse()
 #     return answer
 
-# 같은 숫자는 싫어
-# def solution(arr):
-#     answer = [arr[0]]
-#     point = 0
-#     for i in range(1, len(arr)):
-#         if answer[point] != arr[i]:
-#             answer.append(arr[i])
-#             point += 1
-#     return answer
-
 # 정수 내림차순으로 배치하기
 # def solution(n):
 #     L = [i for i in str(n)]
@@ -235,17 +217,6 @@
 # 문자열을 정수로 바꾸기
 # def solution(s):
 #     return int(s)
-
-# 가운데 글자 가져오기
-# def solution(s):
-#     answer = ''
-#     if len(s) % 2 != 0:
-#         answer = s[len(s)//2]
-#     else:
-#         answer = s[len(s)//2 -1] + s[len(s)//2]
-#     return answer
-# print(solution("abcde"))
-# print(solution("qwer"))
 
 # 문자열 다루기 기본
 # def solution(s):
@@ -328,35 +299,6 @@
 # print(solution(["sun", "bed", "car"], 1))
 # print(solution(["abce", "abcd", "cdx"], 2))
 
-# 체육복
-# def solution(n, lost, reserve):
-#     answer = [1]*(n+2)
-#     answer[n+1] = 0
-#     answer[0] = 0
-#     cnt = 0
-
-#     for i in lost:
-#         answer[i] += -1
-#     for i in reserve:
-#         answer[i] += 1
-#     for i in range(2, n-1):
-#         if answer[i] == 0:
-#             if answer[i-1] == 2:
-#                 answer[i] += 1
-#                 answer[i-1] += -1
-#             elif answer[i+1] == 2:
-#                 answer[i] += 1
-#                 answer[i+1] += -1
-#     for i in answer:
-#         if i >= 1:
-#             cnt += 1
-
-#     return cnt
-
-# print(solution(5, [2, 4], [1, 3, 5]))
-# print(solution(5, [2,4], [3]))
-# print(solution(5, [2, 4, 5], [1, 4]))
-# print(solution(5, [5], [3]))
 
 
     
