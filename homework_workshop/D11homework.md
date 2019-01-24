@@ -27,10 +27,12 @@
 ## 4. 아래와 같은 분할을 grid system을 활용하여 만들어 보시오.
 
 ```python
-<div class="row">
-    <div class="square col-3">25%</div>
-    <div class="square col-6">50%</div>
-    <div class="square col-3">25%</div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">25%</div>
+        <div class="col-6">50%</div>
+        <div class="col-3">25%</div>
+    </div>
 </div>
 ```
 

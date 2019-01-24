@@ -298,8 +298,3 @@
 #     return str_list
 # print(solution(["sun", "bed", "car"], 1))
 # print(solution(["abce", "abcd", "cdx"], 2))
-
-L = [1]
-L1 = [1, 2, 3, 4, 5, 6, 7]
-
-print(L1[::-2])
