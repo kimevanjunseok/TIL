@@ -228,31 +228,6 @@
 #         return False
 #     return not s
 
-# 두 정수 사이의 합
-# def solution(a, b):
-#     M = max(a, b)
-#     N = min(a, b)
-#     answer = 0
-#     for i in range(N, M+1):
-#         answer += i
-#     return answer
-# print(solution(3, 5))
-# print(solution(3, 3))
-# print(solution(5, 3))
-
-# 나누어 떨어지는 숫자 배열
-# def solution(arr, divisor):
-#     answer = []
-#     for i in arr:
-#         if i % divisor == 0:
-#             answer.append(i)
-            
-#     if answer:
-#         answer.sort()
-#     else:
-#         answer.append(-1)
-#     return answer
-
 # 문자열 내 p와 y의 개수
 # def solution(s):
 #     s = s.lower()
@@ -287,14 +262,3 @@
 #     return ''.join(sorted(s, reverse=True))
 
 # print(solution("Zbcdefg"))
-
-# 문자열 내 마음대로 정렬하기(문자열도 sort사용가능)
-# def solution(str_list, n):
-#     str_list.sort()
-#     for i in range(len(str_list)-1, 0, -1):
-#         for j in range(i):
-#             if ord(str_list[j][n]) > ord(str_list[j+1][n]):
-#                 str_list[j+1], str_list[j] = str_list[j], str_list[j+1]
-#     return str_list
-# print(solution(["sun", "bed", "car"], 1))
-# print(solution(["abce", "abcd", "cdx"], 2))
