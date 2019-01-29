@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("sample_input1.txt")
+sys.stdin = open("문자열비교_input.txt")
 
 T = int(input())
 for n in range(1, T+1):
