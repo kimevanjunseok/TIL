@@ -1,13 +1,20 @@
 nav > a {
     font-family: 'Jua', sans-serif;
 }
+
 .section {
-    height: 350px;
     background: url(photo.jpg) no-repeat center;
+    background-color: rgba(220, 220, 220, 0.925);
+    background-blend-mode: lighten;
     background-size: cover;
+    height: 350px;
     font-family: 'Gamja Flower', cursive;
 }
 
+.section:hover {
+    background-blend-mode: unset;
+}
+    
 h2 {
    text-align: center;
 }
@@ -15,4 +22,8 @@ h2 {
 .subtitle > hr {
     border: solid orange;
     width: 70px;
+}
+
+.concer {
+    cursor: pointer;
 }
