@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>영화목록</h1>
+    <form action="/movies/new/">
+        <input type="submit" value="새 영화 등록"/>
+    </form>
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <a href="/movies/{{ movie.id }}/">{{ movie.title }}</a>  
+            <a>/ 평점: {{ movie.score }}</a>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

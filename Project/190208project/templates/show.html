@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            Title: <a>{{ movie.title }}</a><br>
+            Title_en: <a>{{ movie.title_en }}</a><br>
+            Audience: <a>{{ movie.audience }}</a><br>
+            Open_date: <a>{{ movie.open_date }}</a><br>
+            Genre: <a>{{ movie.genre }}</a><br>
+            Watch_grade: <a>{{ movie.watch_grade }}</a><br>
+            Score: <a>{{ movie.score }}</a><br>
+            Poster_url: <a href="{{ movie.poster_url }}">{{ movie.poster_url }}</a><br>
+            Description: <a>{{ movie.description }}</a><br>
+            <a href="/movies/">[목록]</a>
+            <a href="/movies/{{ movie.id }}/delete">[삭제]</a>
+            <a href="/movies/{{ movie.id }}/edit">[수정]</a>
+        </div>
+    </div>
+</body>
+
+</html>
