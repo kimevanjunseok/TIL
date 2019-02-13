@@ -40,11 +40,9 @@ for n in range(1, T+1):
             if i not in result:
                 result += [i]
 
-    print(len(result), V)
-
     for i in range(len(result)):
         result[i] = f'{result[i]}'
-
+        
     result = " ".join(result)
     
     print(f"#{n} {result}")
