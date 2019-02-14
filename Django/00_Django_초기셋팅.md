@@ -198,15 +198,15 @@
      `dinner.py`에서
 
      ```html
-     	{% for menu in menus %}
-             <p>{{ menu }}</p>
-         {% endfor %}
-         <hr>
-         {% if pick == "볶음밥" %}
-             <p>김치볶음밥!!!</p>
-         {% else %}
-             <p>{{ pick }}</p>
-         {% endif %}
+     {% for menu in menus %}
+     <p>{{ menu }}</p>
+     {% endfor %}
+     <hr>
+     {% if pick == "볶음밥" %}
+     <p>김치볶음밥!!!</p>
+     {% else %}
+     <p>{{ pick }}</p>
+     {% endif %}
      ```
 
 6. Template
