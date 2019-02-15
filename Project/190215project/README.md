@@ -1,0 +1,21 @@
+```
+05_detail/
+	05_detail/
+		__init__.py
+		settings.py
+		urls.py
+		wsgi.py
+	detail/
+		templates/
+			...
+		__init__.py
+		admin.py
+		apps.py
+		models.py
+		tests.py
+		urls.py
+		views.py
+	manage.py
+	README.md
+```
+
