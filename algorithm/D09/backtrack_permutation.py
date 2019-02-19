@@ -33,6 +33,6 @@ def backtrack(a, k, input):
 
 MAXCANDIDATES = 100
 NMAX = 100
-data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+data = [0, 1, 2, 3, 4, 5]
 a = [0] * NMAX
-backtrack(a, 0, 10)
+backtrack(a, 0, 5)
