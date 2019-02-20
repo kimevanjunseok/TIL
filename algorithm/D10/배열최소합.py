@@ -62,41 +62,36 @@ sys.stdin = open('배열최소합_input.txt')
 
 T = int(input())
 
-def finder(L, cnt):
-    global visited, min_sum, result, arr
-    print(visited)
-    for idx, i in enumerate(L):
+def func(x, count):
+    global visited, min_sum, arr, N, result
+
+    for idx, i in enumerate(x):
         if idx not in visited:
+        
             visited.append(idx)
             min_sum.append(i)
-            
-            if cnt == N-1:
-                if result > sum(min_sum):
-                    result = sum(min_sum)
-                    visited.pop()
-                    min_sum.pop()
-                    cnt += -1
-                else:
-                    visited.pop()
-                    min_sum.pop()
-                    cnt += -1
 
+            if count == N-1:
+                if sum(min_sum) < result:
+                    result = sum(min_sum)
+                visited.pop()
+                min_sum.pop()
+                break
+                
             elif sum(min_sum) > result:
                 visited.pop()
                 min_sum.pop()
-                cnt += -1
                 break
-                   
             else:
-                finder(arr[cnt+1], cnt+1)
-
-    if not min_sum:
-        return
-    cnt += -1
-    min_sum.pop()
-    visited.pop()
-
+                func(arr[count+1], count+1)
     
+
+    if (not visited) or (not min_sum):
+        return 
+    else:
+        visited.pop()
+        min_sum.pop()
+
 
 for n in range(1, T+1):
 
@@ -106,5 +101,6 @@ for n in range(1, T+1):
     min_sum = []
     cnt = 0
     result = 90
-    finder(arr[cnt], cnt)
+    L = list(range(1, N+1))
+    func(L, cnt)
     print(f'#{n} {result}')
