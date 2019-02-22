@@ -1,0 +1,13 @@
+{% extends 'movies/base.html' %}
+{% block title %}영화 정보 수정{% endblock %}
+{% block body %}
+    <form action="/movies/{{ movie.pk }}/update/">
+        <input type="text" name="title" value="{{ movie.title }}"/>
+        <input type="text" name="audience" value="{{ movie.audience }}"/>
+        <input type="text" name="genre" value="{{ movie.genre }}"/>
+        <input type="float" name="score" value="{{ movie.score }}"/>
+        <textarea name="poster_url">{{ movie.poster_url }}</textarea>
+        <textarea name="description">{{ movie.description }}</textarea>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}

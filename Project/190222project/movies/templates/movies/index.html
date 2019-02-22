@@ -1,0 +1,12 @@
+{% extends 'movies/base.html' %} {% block title %}영화 목록{% endblock %} {% block body %}
+<h1 class="text-center">영화 목록</h1>
+{% for movie in movies %}
+<div class="d-flex justify-content-center m-3">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <a href="/movies/{{ movie.id }}" class="card-link">{{ movie.title }}</a>
+            <span class="badge badge-info">{{ movie.score }}</span>
+        </div>
+    </div>
+</div>
+{% endfor %} {% endblock %}

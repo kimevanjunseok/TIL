@@ -1,0 +1,23 @@
+{% extends 'movies/base.html' %} {% block title %}영화 정보 조회{% endblock %} {% block body %}
+<div class="d-flex justify-content-center m-5">
+    <div class="card" style="width: 36rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <hr>
+            <h6 class="card-subtitle mb-2 text-muted">관객수 : {{ movie.audience }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">장르 : {{ movie.genre }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">평점 : {{ movie.score }}</h6>
+            <hr>
+            <p class="card-text">{{ movie.description }}</p>
+            <hr>
+            <a class="card-text" href="{{ movie.poster_url }}">{{ movie.poster_url }}</a>
+            <hr>
+            <div class="d-flex justify-content-between mx-3">
+                <a href="/movies/">[영화 목록]</a>
+                <a href="/movies/{{ movie.pk }}/edit/">[해당 영화 정보 수정]</a>
+                <a href="/movies/{{ movie.pk }}/delete/">[삭제]</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
