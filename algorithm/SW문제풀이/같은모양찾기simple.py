@@ -9,7 +9,7 @@ result = 0
 for i in range(M-P+1):
     save = []
     for j in range(M-P+1):
-        save = [arr_M[i][j:j+P]] + [arr_M[i+1][j:j+P]] + [arr_M[i+2][j:j+P]]
+        save = [arr_M[i+k][j:j+P] for k in range(P)]
         if arr_P == save:
             result += 1
 
