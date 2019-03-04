@@ -41,6 +41,6 @@ for i in range(len(arr)-2):
         time_2 = arr[j] + ((arr[j] - arr[i])*2)
         time_1 = arr[j] + (arr[j] - arr[i])
         length = time_2 - time_1 + 1
-        result = (length - len(set(range(1)) - set(arr)))
+        result += (length - len(set(range(time_1, time_2+1)) - set(arr)))
 print(result)
     
