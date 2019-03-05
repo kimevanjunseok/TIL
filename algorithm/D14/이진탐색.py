@@ -28,4 +28,5 @@ for n in range(1, T+1):
     save = []
     Treemake()
     inorder(1)
-    print(f"#{n} {save.index(1)+1} {save.index(N//2)+1}")
+    print(save)
+    print("#{0} {1} {2}".format(n, save.index(1)+1, save.index(N//2)+1))

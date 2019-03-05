@@ -38,25 +38,25 @@ for n in range(1, T+1):
     cnt = 1
     out = 0
     while True:
-        
-        if arr[cnt][1] == 0 and arr[cnt][2] == 0:
-            cnt = 1
-            out = 0
-        if heap_input[arr[cnt][0]] > heap_input[arr[cnt][1]] or heap_input[arr[cnt][0]] > heap_input[arr[cnt][2]]:
-            if heap_input[arr[cnt][1]] < heap_input[arr[cnt][2]]:
-                heap_input[arr[cnt][0]], heap_input[arr[cnt][1]] = heap_input[arr[cnt][1]], heap_input[arr[cnt][0]]
-            elif heap_input[arr[cnt][1]] > heap_input[arr[cnt][2]]:
-                if arr[cnt][2] != 0:
-                    heap_input[arr[cnt][0]], heap_input[arr[cnt][2]] = heap_input[arr[cnt][2]], heap_input[arr[cnt][0]]
-                else:
-                    if heap_input[arr[cnt][0]] > heap_input[arr[cnt][1]]:
-                        heap_input[arr[cnt][0]], heap_input[arr[cnt][1]] = heap_input[arr[cnt][1]], heap_input[arr[cnt][0]]
+
+        if heap_input[arr[cnt][0]] > heap_input[arr[cnt][1]]:
+            heap_input[arr[cnt][0]], heap_input[arr[cnt][1]] = heap_input[arr[cnt][1]], heap_input[arr[cnt][0]]
             out += 1
+            cnt = 0
+
+        elif heap_input[arr[cnt][2]] != 0 and heap_input[arr[cnt][0]] > heap_input[arr[cnt][2]]:
+            heap_input[arr[cnt][0]], heap_input[arr[cnt][2]] = heap_input[arr[cnt][2]], heap_input[arr[cnt][0]]
+            out += 1
+            cnt = 0
+
         cnt += 1
 
-        
-        if (arr[cnt][1] == 0 and arr[cnt][2] == 0) and not out:
-            break
+        if arr[cnt][1] == 0 and arr[cnt][2] == 0:
+            cnt = 1
+            if out == 0:
+                break
+            else:
+                out = 0
 
     result = 0
     com = arr[-1][0]
@@ -73,5 +73,5 @@ for n in range(1, T+1):
         if cnt == len(arr):
             break
 
-    print(f'#{n} {result}')
+    print('#{0} {1}'.format(n, result))
 

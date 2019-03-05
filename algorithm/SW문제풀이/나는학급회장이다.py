@@ -14,7 +14,7 @@ if sum(saram_1) > sum(saram_2) and sum(saram_1) > sum(saram_3):
 elif sum(saram_2) > sum(saram_1) and sum(saram_2) > sum(saram_3):
     print(f'2 {sum(saram_2)}')
 elif sum(saram_3) > sum(saram_1) and sum(saram_3) > sum(saram_2):
-    print(f'3 {sum(saram_3)}')
+        print(f'3 {sum(saram_3)}')
 elif sum(saram_1) == sum(saram_2) and sum(saram_1) == sum(saram_3):
     if saram_1.count(3) > saram_2.count(3) and saram_1.count(3) > saram_3.count(3):
         print(f'1 {sum(saram_1)}')
