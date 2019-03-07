@@ -1,144 +1,6 @@
 import sys
 sys.stdin = open('핀볼게임_input.txt')
 
-def right(x, y):
-    global cnt, result, count
-    count += 1
-
-    while True:
-        x += dx[0]
-        y += dy[0]
-        if count > 1:
-            if [x, y] in visited:
-                break
-        if arr[x][y] != 0:
-            break
-    if arr[x][y] == 0:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-    elif arr[x][y] == 1 or arr[x][y] == 2 or arr[x][y] == 5:
-        cnt += 1
-        return left(x, y)
-    elif arr[x][y] == 3:
-        cnt += 1
-        return down(x, y)
-    elif arr[x][y] == 4:
-        cnt += 1
-        return up(x, y)
-    elif 6 <= arr[x][y] <= 10:
-        head = finder(x, y, arr[x][y])
-        return right(head[0], head[1])
-    elif arr[x][y] == -1:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-
-
-def left(x, y):
-    global cnt, result, count
-    count += 1
-    while True:
-        x += dx[1]
-        y += dy[1]
-        if count > 1:
-            if [x, y] in visited:
-                break
-        if arr[x][y] != 0:
-            break
-    if arr[x][y] == 0:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-    elif arr[x][y] == 3 or arr[x][y] == 4 or arr[x][y] == 5:
-        cnt += 1
-        return right(x, y)
-    elif arr[x][y] == 2:
-        cnt += 1
-        return down(x, y)
-    elif arr[x][y] == 1:
-        cnt += 1
-        return up(x, y)
-    elif 6 <= arr[x][y] <= 10:
-        head = finder(x, y, arr[x][y])
-        return left(head[0], head[1])
-    elif arr[x][y] == -1:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-
-def up(x, y):
-    global cnt, result, count
-    count += 1
-    while True:
-        x += dx[2]
-        y += dy[2]
-        if count > 1:
-            if [x, y] in visited:
-                break
-        if arr[x][y] != 0:
-            break
-    if arr[x][y] == 0:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-    elif arr[x][y] == 1 or arr[x][y] == 4 or arr[x][y] == 5:
-        cnt += 1
-        return down(x, y)
-    elif arr[x][y] == 2:
-        cnt += 1
-        return right(x, y)
-    elif arr[x][y] == 3:
-        cnt += 1
-        return left(x, y)
-    elif 6 <= arr[x][y] <= 10:
-        head = finder(x, y, arr[x][y])
-        return up(head[0], head[1])
-    elif arr[x][y] == -1:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-
-def down(x, y):
-    global cnt, result, count
-    count += 1
-    while True:
-        x += dx[3]
-        y += dy[3]
-        if count > 1:
-            if [x, y] in visited:
-                break
-        if arr[x][y] != 0:
-            break
-    if arr[x][y] == 0:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-    elif arr[x][y] == 2 or arr[x][y] == 3 or arr[x][y] == 5:
-        cnt += 1
-        return up(x, y)
-    elif arr[x][y] == 1:
-        cnt += 1
-        return right(x, y)
-    elif arr[x][y] == 4:
-        cnt += 1
-        return left(x, y)
-    elif 6 <= arr[x][y] <= 10:
-        head = finder(x, y, arr[x][y])
-        return down(head[0], head[1])
-    elif arr[x][y] == -1:
-        if result < cnt:
-            result = cnt
-        cnt = 0
-        return
-
 def finder(x, y, z):
     global N
     for i in range(1, N+1):
@@ -159,21 +21,162 @@ for n in range(1, T+1):
     visited = []
     cnt = 0
     count = 0
+    S = ['right', 'left', 'up', 'down']
     for i in range(1, N+1):
         for j in range(1, N+1):
             if arr[i][j] == 0:
-
                 visited.append([i, j])
+                for k in S:
+                    String = k
+                    x = i
+                    y = j
+                    while True:
+                        if String == 'right':
+                            count += 1
 
-                right(i, j)
+                            while True:
+                                x += dx[0]
+                                y += dy[0]
+                                if count > 1:
+                                    if [x, y] in visited:
+                                        break
+                                if arr[x][y] != 0:
+                                    break
+                            if arr[x][y] == 0:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                            elif arr[x][y] == 1 or arr[x][y] == 2 or arr[x][y] == 5:
+                                cnt += 1
+                                String = 'left'
+                            elif arr[x][y] == 3:
+                                cnt += 1
+                                String = 'down'
+                            elif arr[x][y] == 4:
+                                cnt += 1
+                                String = 'up'
+                            elif 6 <= arr[x][y] <= 10:
+                                head = finder(x, y, arr[x][y])
+                                x = head[0]
+                                y = head[1]
+                                String = 'right'
+                            elif arr[x][y] == -1:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
 
-                left(i, j)
-
-                down(i, j)
-
-                up(i, j)
+                        elif String == 'left':
+                            count += 1
+                            while True:
+                                x += dx[1]
+                                y += dy[1]
+                                if count > 1:
+                                    if [x, y] in visited:
+                                        break
+                                if arr[x][y] != 0:
+                                    break
+                            if arr[x][y] == 0:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                            elif arr[x][y] == 3 or arr[x][y] == 4 or arr[x][y] == 5:
+                                cnt += 1
+                                String = 'right'
+                            elif arr[x][y] == 2:
+                                cnt += 1
+                                String = 'down'
+                            elif arr[x][y] == 1:
+                                cnt += 1
+                                String = 'up'
+                            elif 6 <= arr[x][y] <= 10:
+                                head = finder(x, y, arr[x][y])
+                                x = head[0]
+                                y = head[1]
+                                String = 'left'
+                            elif arr[x][y] == -1:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                        elif String == 'up':
+                            count += 1
+                            while True:
+                                x += dx[2]
+                                y += dy[2]
+                                if count > 1:
+                                    if [x, y] in visited:
+                                        break
+                                if arr[x][y] != 0:
+                                    break
+                            if arr[x][y] == 0:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                            elif arr[x][y] == 1 or arr[x][y] == 4 or arr[x][y] == 5:
+                                cnt += 1
+                                String = 'down'
+                            elif arr[x][y] == 2:
+                                cnt += 1
+                                String = 'right'
+                            elif arr[x][y] == 3:
+                                cnt += 1
+                                String = 'left'
+                            elif 6 <= arr[x][y] <= 10:
+                                head = finder(x, y, arr[x][y])
+                                x = head[0]
+                                y = head[1]
+                                String = 'up'
+                            elif arr[x][y] == -1:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                        elif String == 'down':
+                            count += 1
+                            while True:
+                                x += dx[3]
+                                y += dy[3]
+                                if count > 1:
+                                    if [x, y] in visited:
+                                        break
+                                if arr[x][y] != 0:
+                                    break
+                            if arr[x][y] == 0:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
+                            elif arr[x][y] == 2 or arr[x][y] == 3 or arr[x][y] == 5:
+                                cnt += 1
+                                String = 'up'
+                            elif arr[x][y] == 1:
+                                cnt += 1
+                                String = 'right'
+                            elif arr[x][y] == 4:
+                                cnt += 1
+                                String = 'left'
+                            elif 6 <= arr[x][y] <= 10:
+                                head = finder(x, y, arr[x][y])
+                                x = head[0]
+                                y = head[1]
+                                String = 'down'
+                            elif arr[x][y] == -1:
+                                if result < cnt:
+                                    result = cnt
+                                cnt = 0
+                                count = 0
+                                break
 
                 visited.pop()
     print("#{0} {1}".format(n, result))
-
-
