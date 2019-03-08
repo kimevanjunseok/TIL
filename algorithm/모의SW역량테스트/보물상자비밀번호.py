@@ -23,8 +23,6 @@ def trans(x):
         else:
             result += int(x[i]) * (16**i)
 
-
-
 for n in range(1, T+1):
     N, K = map(int, input().split())
     arr = input()

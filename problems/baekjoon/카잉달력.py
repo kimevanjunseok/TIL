@@ -17,11 +17,14 @@ for n in range(N):
     gcd_num = gcd(M, N)
     lcm_num = lcm(M, N)
     stack = []
-    result = 0
-    for i in range(M, lcm_num+1, M):
-        print(i)
-        if (i+x) % N == y:
-            result = i+x
-            break
-    print(result) if result else print(-1)
+    result = -1
+
+    com_1 = set([i + x for i in range(0, lcm_num, M)])
+    com_2 = set([i + y for i in range(0, lcm_num, N)])
+
+    if com_1 & com_2:
+        result = max(com_1 & com_2)
+
+
+    print(result)
 
