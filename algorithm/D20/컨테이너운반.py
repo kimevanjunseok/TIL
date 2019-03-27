@@ -17,4 +17,4 @@ for n in range(1, T+1):
                 result += arrN[j]
                 idx = j+1
                 break
-    print(result)
+    print("#{0} {1}".format(n, result))
