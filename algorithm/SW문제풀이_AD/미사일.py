@@ -1,37 +1,29 @@
-def finder1(x, y):
-    for i in arr:
-        if i[0] != x and i[1] != y:
-            if abs(i[0] - x) + abs(i[1] - y) <= b[2]:
-                arr[i[0]][i[1]] += -b[1]
+def remove():
+    global M, B, D
 
-def finder2(x, y):
-    for i in arr:
-        if i[0] != x and i[1] != y:
-            if abs(i[0] - x) + abs(i[1] - y) <= b[2]:
-                arr[i[0]][i[1]] += b[1]
+    for i in range(M):
+        if t[i][2] > 0:
+            t[i][2] += -B
+            for j in range(len(arr)):
+                if t[i] != arr[j] and abs(t[i][0] - arr[j][0]) + abs(t[i][1] - arr[j][1]) <= D:
+                    arr[j][2] += -B
+
+def finder():
+    global minN
+    cnt = 0
+    for i in range(len(arr)):
+        if arr[i][2] > 0:
+            cnt += 1
+    if minN > cnt:
+        minN = cnt
 
 def combi(x, y):
-    global N, minN
+    global N
     if y == 0:
-        cnt = 0
-        for i in range(len(t)):
-            for j in range(len(arr)):
-                if arr[j][0] == t[i][0] and arr[j][1] == t[i][1]:
-                    arr[j][2] += -b[1]
-                    finder1(t[i][0], t[i][1])
-
-        for i in range(len(arr)):
-            if arr[i][2] > 0:
-                cnt += 1
-
-        if cnt < minN:
-            minN = cnt
-
-        for i in range(len(t)):
-            for j in range(len(arr)):
-                if arr[j][0] == t[i][0] and arr[j][1] == t[i][1]:
-                    arr[j][2] += b[1]
-                    finder2(t[i][0], t[i][1])
+        remove()
+        finder()
+        for i in range(N):
+            arr[i][2] = copy[i]
 
     elif x == 0:
         return
@@ -40,20 +32,18 @@ def combi(x, y):
         combi(x, y-1)
         combi(x-1, y)
 
-N = int(input())
+N =int(input())
 arr = [list(map(int, input().split())) for _ in range(N)]
-b = list(map(int, input().split()))
-# map = [[0 for _ in range(1001)] for _ in range(1001)]
-# for i in arr:
-#     map[i[0]][i[1]] = i[2]
-
-
-t = [0] * b[0]
-minN = N
-combi(N, b[0])
+M, B, D = map(int, input().split())
+minN = 9999999999999
+t = [0] * M
+copy = [0] * N
+for i in range(N):
+    copy[i] = arr[i][2]
+combi(N, M)
 print(minN)
 
-#
+#################################################################################
 # def clear(no):
 #     global N, R, P
 #     for i in range(N):

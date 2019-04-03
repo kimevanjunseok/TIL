@@ -4,9 +4,7 @@ def cut(x, value):
     for i in range(x, len(arr)):
         sums += (arr[i] - value)
     return sums
-
-
-
+    
 def bin(x):
     start, end = 0, len(arr)
     while start <= end:
