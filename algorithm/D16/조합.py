@@ -1,19 +1,14 @@
-def myprint(q):
-    while q != 0:
-        q = q -1
-        print(" %d " % (T[q]), end = "")
-    print()
-def comb(n, r, q):
-    if r == 0:
-        myprint(q)
-    elif n < r:
+def comb(x, y):
+    if y == 0:
+        print(T)
+    elif x < y:
         return
     else:
-        T[r-1] = A[n-1]
-        comb(n-1, r-1, q)
-        comb(n-1, r, q)
+        T[y-1] = A[x-1]
+        comb(x-1, y-1)
+        comb(x-1, y)
 
 A =[1,2,3,4]
 T =[0] * 3
 
-comb(4,3,3)
+comb(4,3)

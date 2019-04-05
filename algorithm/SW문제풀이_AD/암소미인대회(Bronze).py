@@ -11,7 +11,6 @@ def bfs(a, b, c):
                 arr[ax][ay] = c
                 q.append([ax, ay])
 
-
 X, Y = map(int, input().split())
 arr = [list(input()) for _ in range(X)]
 dx = [0, 0, -1, 1]
@@ -32,15 +31,9 @@ for i in range(X):
             L1.append([i, j])
         elif arr[i][j] == "2":
             L2.append([i, j])
-for i in arr:
-    print(i)
 
 for i in range(len(L1)):
     for j in range(len(L2)):
         if abs(L1[i][0] - L2[j][0]) + abs(L1[i][1] - L2[j][1]) < minN:
             minN = abs(L1[i][0] - L2[j][0]) + abs(L1[i][1] - L2[j][1])
 print(minN-1)
-
-
-
-

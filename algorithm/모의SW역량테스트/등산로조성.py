@@ -12,21 +12,14 @@ def find_max():
     return [[i, j] for i in range(N) for j in range(N) if arr[i][j] == max_num]
 
 def right(x, y):
-    global max_road
+    global max_road, N
 
     visited.append([x, y])
-
-    if 0 <= y + 1 < N and arr[x][y] > arr[x][y + 1]:
-        right(x, y + 1)
-
-    if 0 <= y - 1 < N and arr[x][y] > arr[x][y - 1]:
-        right(x, y - 1)
-
-    if 0 <= x - 1 < N and arr[x][y] > arr[x - 1][y]:
-        right(x - 1, y)
-
-    if 0 <= x + 1 < N  and arr[x][y] > arr[x + 1][y]:
-        right(x + 1, y)
+    for i in range(4):
+        ax = x + dx[i]
+        ay = y + dy[i]
+        if 0 <= ax < N and 0 <= ay < N and arr[x][y] > arr[ax][ay]:
+            right(ax, ay)
 
     if len(visited) > max_road:
         max_road = len(visited)
@@ -38,6 +31,8 @@ T = int(input())
 for n in range(1, T+1):
     N, K = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
+    dx = [0, 0, -1, 1]
+    dy = [1, -1, 0, 0]
     max_road = 0
     location = find_max()
     for i in range(N):
