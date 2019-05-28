@@ -27,7 +27,7 @@ with open('movie_naver.csv', 'w', newline='', encoding='utf-8') as f:
                 "X-Naver-Client-Id" : client_id,
                 "X-Naver-Client-Secret" : client_secret
         }
-        url = f"https://openapi.naver.com/v1/search/movie.json?query={movie_list[i]}"
+        url = "https://openapi.naver.com/v1/search/movie.json?query={0}".format(movie_list[i])
         res = requests.get(url, headers=headers).json()
         writer.writerow({'movie_code' : movie_code[i], 'thumb_url' : res['items'][0]['image'], 'link_url' : res['items'][0]['link'],'user_rating' : res['items'][0]['userRating']})
 
