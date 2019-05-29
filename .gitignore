@@ -1,6 +1,60 @@
 
-# Created by https://www.gitignore.io/api/vuejs,django,python,firebase,jupyternotebook
-# Edit at https://www.gitignore.io/?templates=vuejs,django,python,firebase,jupyternotebook
+# Created by https://www.gitignore.io/api/c,vuejs,django,python,jupyternotebook
+# Edit at https://www.gitignore.io/?templates=c,vuejs,django,python,jupyternotebook
+
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
 
 ### Django ###
 *.log
@@ -21,7 +75,6 @@ media
 *$py.class
 
 # C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -135,15 +188,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-### Firebase ###
-.idea
-**/node_modules/*
-**/.firebaserc
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
-
 ### JupyterNotebook ###
 */.ipynb_checkpoints/*
 
@@ -213,4 +257,4 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-# End of https://www.gitignore.io/api/vuejs,django,python,firebase,jupyternotebook
+# End of https://www.gitignore.io/api/c,vuejs,django,python,jupyternotebook
