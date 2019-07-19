@@ -14,12 +14,13 @@ def Merge(left, right):
     global cnt
 
     i, j = 0, 0
+    left_len, right_len = len(left), len(right)
     result = []
 
-    if left[-1] > right[-1]:
+    if left[left_len - 1] > right[right_len - 1]:
         cnt += 1
 
-    while (i < len(left) and (j < len(right))):
+    while (i < left_len) and (j < right_len):
         if left[i] <= right[j]:
             result.append(left[i])
             i += 1
@@ -27,11 +28,11 @@ def Merge(left, right):
             result.append(right[j])
             j += 1
 
-    while i < len(left):
+    while i < left_len:
         result.append(left[i])
         i += 1
 
-    while j < len(right):
+    while j < right_len:
         result.append(right[j])
         j += 1
     
@@ -39,6 +40,7 @@ def Merge(left, right):
     # result += right[j:]
 
     return result
+
 
 T = int(input())
 
