@@ -8,9 +8,9 @@
 
 > python 3.6.x
 
-- [Jupyter](Python/Jupyter.md)
+- [Jupyter](/Python/Jupyter.md)
 
-- [List](Python/List.md)
-- [Module](Python/Module.md)
-- [With](Python/With.md)
+- [List](/Python/List.md)
+- [Module](/Python/Module.md)
+- [With](/Python/With.md)
 
