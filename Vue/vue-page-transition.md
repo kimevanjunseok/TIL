@@ -8,6 +8,16 @@
 $ npm install vue-page-transition
 ```
 
+#### 사용(main.js)
+
+```javascript
+// ...
+import VuePageTransition from 'vue-page-transition'
+ 
+Vue.use(VuePageTransition)
+// ...
+```
+
 #### 모든 router에 적용(App.vue)
 
 ```vue
