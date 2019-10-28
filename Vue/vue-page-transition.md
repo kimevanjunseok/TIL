@@ -21,9 +21,11 @@ Vue.use(VuePageTransition)
 #### 모든 router에 적용(App.vue)
 
 ```vue
+// ...
 <vue-page-transition name="fade-in-right">
     <router-view/>
 </vue-page-transition>
+// ...
 ```
 
 #### 원하는 router에 적용(router.js)
