@@ -12,6 +12,7 @@
 - [List](Python/list.md)
 - [Module](Python/Module.md)
 - [With](Python/with.md)
+- [Scraping](Python/Scraping.md)
 
 ## [Vue](/Vue)
 
