@@ -1,6 +1,6 @@
 # Scraping
 
-#### 설치
+### 설치
 
 ```bash
 $ pip install requests
@@ -9,9 +9,9 @@ $ pip install bs4
 
 > scraping은 많이 해봐야 익숙해지며 사람마다 불러오는 곳이 다를 수 있다.
 
-#### scraping 방법(크롬)
+### scraping 방법(크롬)
 
-> 네이버 인기순위
+> #### 네이버 인기순위
 
 F12를 누르고 Ctrl + Shift + C 상태에서  
 
@@ -39,7 +39,7 @@ for tag in soup.select('.ah_l .ah_item'):
     print('{}는 {} 입니다.'.format(rank, name))
 ```
 
-> 네이버 금융 코스피
+> #### 네이버 금융 코스피
 
 ![캡처](https://user-images.githubusercontent.com/45934117/67657086-0a527780-f999-11e9-91a4-4e27dde91f71.PNG)
 
@@ -56,7 +56,7 @@ for tag in soup.select('.kospi_area .heading_area'):
     print('{}는 {} 입니다.'.format(name, number))
 ```
 
-> 네이버 환율
+> #### 네이버 환율
 
 ```python
 url = "https://m.stock.naver.com/marketindex/index.nhn"
