@@ -14,6 +14,14 @@
 - [With](Python/with.md)
 - [Scraping](Python/Scraping.md)
 
+## [npm](/npm)
+
+npm명령어들 쓰면서 자주쓰는 명령어와 궁금했던 것을 정리한 곳
+
+개발 환경
+
+> npm 6.9.0
+
 ## [Vue](/Vue)
 
 개발 환경
@@ -26,4 +34,4 @@
 
 개발 환경
 
-> 10.16.0
+> node 10.16.0
