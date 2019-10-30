@@ -30,8 +30,8 @@ npm명령어들 쓰면서 자주쓰는 명령어와 궁금했던 것을 정리�
 
 - [vue-page-transition](/Vue/vue-page-transition.md)
 
-## [Node](/Node)
+## [Nodejs](/Nodejs)
 
 개발 환경
 
-> node 10.16.0
+> Nodejs 10.16.0
