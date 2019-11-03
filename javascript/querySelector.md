@@ -2,6 +2,14 @@
 
 > 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 [`Element`](https://developer.mozilla.org/ko/docs/Web/API/Element)를 반환합니다. 일치하는 요소가 없으면 `null`을 반환합니다.
 
+### 구문
+
+```html
+document.querySelector(selector)
+```
+
+### 사용법
+
 ```html
 <div class="class-div">div</div>
 <script>
