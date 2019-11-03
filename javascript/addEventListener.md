@@ -21,13 +21,13 @@ target.addEventListener(type, listener[, options])
 </script>
 ```
 
-콘솔에서
+콘솔에서 클릭할 때마다 함수가 실행된다.
 
 ```
 1
 ```
 
-클릭할 때마다 함수가 실행된다.
+또한, 클릭할 때마다 cnt를 증가 시킬 수 있다.
 
 ```html
 <button class="class-btn">div</button>
@@ -42,5 +42,3 @@ target.addEventListener(type, listener[, options])
     })
 </script>
 ```
-
-클릭 할때마다 cnt가 증가한다.
