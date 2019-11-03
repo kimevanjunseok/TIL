@@ -28,3 +28,19 @@ target.addEventListener(type, listener[, options])
 ```
 
 클릭할 때마다 함수가 실행된다.
+
+```html
+<button class="class-btn">div</button>
+<div class="div-cnt"></div>
+<script>
+    const click_button = document.querySelector('.class-btn')
+    const div_cnt = document.querySelector('.div-cnt')
+    let cnt = 0
+    click_button.addEventListener('click', event => {
+        cnt += 1
+        div_cnt.innerHTML = cnt
+    })
+</script>
+```
+
+클릭 할때마다 cnt가 증가한다.

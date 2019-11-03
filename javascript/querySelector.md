@@ -4,7 +4,7 @@
 
 ### 구문
 
-```html
+```
 document.querySelector(selector)
 ```
 
@@ -41,4 +41,21 @@ document.querySelector(selector)
 <div class="class-div">div1</div>
 ```
 
-이렇게 출력한다.
+이렇게 출력된다.
+
+### prepend
+
+> javascript에서 추가할 수있다.
+
+```html
+<h1>prepend</h1>
+<div class="add"></div>
+<script>
+    document.querySelector('.add').prepend('hi')
+</script>
+```
+
+출력 결과
+
+<img width="773" alt="캡처" src="https://user-images.githubusercontent.com/45934117/68082401-6ddc1980-fe5f-11e9-8f61-3f5b80e30ad9.PNG">
+
