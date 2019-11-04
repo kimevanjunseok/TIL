@@ -12,19 +12,14 @@ express 란?
 
 ```bash
 $ npm install express
-# express 프로젝트의 기본 형식을 간단하게 만들어 주는 모듈
-$ npm install express-generator
+$ npm install express-generator # express 프로젝트의 기본 형식을 간단하게 만들어 주는 모듈
 ```
 
 프로젝트 생성 및 실행
 
 ```bash
-# 프로젝트 생성
-$ express [프로젝트 폴더명]
-# 폴더 이동
-$ cd [프로젝트 폴더명]
-# 모듈 설치
-$ npm install
-# 서버 실행
-$ npm start
+$ express [프로젝트 폴더명] # 프로젝트 생성
+$ cd [프로젝트 폴더명] # 폴더 이동
+$ npm install # 모듈 설치
+$ npm start # 서버 실행
 ```
