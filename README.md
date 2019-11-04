@@ -14,6 +14,7 @@
 - [List](Python/list.md)
 - [Module](Python/Module.md)
 - [With](Python/with.md)
+- [Random](Python/Random.md)
 - [Scraping](Python/Scraping.md)
 
 ## [npm](/npm)
