@@ -42,6 +42,7 @@ npm명령어들 쓰면서 자주쓰는 명령어와 궁금했던 것을 정리�
 
 사용 방법
 
+- [router](/Vue/router.md)
 - [props](/Vue/props.md)
 - [vue-page-transition](/Vue/vue-page-transition.md)
 - [error: Unexpected console statement](/Vue/Unexpected_console_statement.md)
