@@ -42,7 +42,9 @@ npm명령어들 쓰면서 자주쓰는 명령어와 궁금했던 것을 정리�
 
 사용 방법
 
+- [props](/Vue/props.md)
 - [vue-page-transition](/Vue/vue-page-transition.md)
+- [error: Unexpected console statement](/Vue/Unexpected_console_statement.md)
 - [How to get current name of route in Vue](/Vue/How_to_get_current_name_of_route_in_Vue.md)
 
 ## [Nodejs](/Nodejs)
