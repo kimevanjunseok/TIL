@@ -70,19 +70,19 @@ $ python manage.py startapp APP명
 ```
 # 프로젝트 폴더
 ├── 프로젝트명
-│	└── __init__.py
-│	└── settings.py
-│	└── urls.py.py
-│	└── wsgi.py
+│    └── __init__.py
+│    └── settings.py
+│    └── urls.py.py
+│    └── wsgi.py
 ├── APP명
-│	└── migrations
-│		└── __init__.py
-│	└── __init__.py
-│	└── admin.py
-│	└── apps.py.py
-│	└── models.py
-│	└── tests.py
-│	└── views.py
+│    └── migrations
+│        └── __init__.py
+│    └── __init__.py
+│    └── admin.py
+│    └── apps.py.py
+│    └── models.py
+│    └── tests.py
+│    └── views.py
 ├── db.sqlite3
 └── manage.py
 ```
