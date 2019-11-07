@@ -75,6 +75,8 @@ $ python manage.py startapp APP명
 │	└── urls.py.py
 │	└── wsgi.py
 ├── APP명
+│	└── migrations
+│		└── __init__.py
 │	└── __init__.py
 │	└── admin.py
 │	└── apps.py.py
