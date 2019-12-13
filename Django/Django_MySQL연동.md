@@ -39,3 +39,8 @@
   ...
   ```
 
+- migrate
+
+  ```bash
+  $python manage.py migrate
+  ```
