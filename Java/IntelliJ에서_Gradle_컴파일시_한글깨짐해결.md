@@ -8,7 +8,7 @@
 
 ### 2. IntelliJ에서 Setting
 
-IntelliJ를 실행하고 `help -> idea64.exe.vmoptions`에 들어간다.
+IntelliJ를 실행하고 `help -> Edit Custom VM Options... -> idea64.exe.vmoptions`에 들어간다.
 
 마찬가지로 `-Dfile.encoding=UTF-8`를 추가한다.
 
