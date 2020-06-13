@@ -45,6 +45,7 @@ npm명령어들 쓰면서 자주쓰는 명령어와 궁금했던 것을 정리�
 - [innerHTML](/Javascript/innerHTML.md)
 - [innerText](/Javascript/innerText.md)
 - [querySelector](/Javascript/querySelector.md)
+- [innerHTML와innerText차이](/Javascript/innerHTML와innerText차이.md)
 
 ## [Vue](/Vue)
 

@@ -1,8 +1,0 @@
-/* display 아예없어짐 */
-.none {
-    display: none;
-}
-
-.hidden {
-    visibility: hidden;
-}
